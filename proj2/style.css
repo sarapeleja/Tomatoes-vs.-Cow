@@ -1,0 +1,84 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border: 0;
+    overflow: hidden;
+    /*  Disable scrollbars */
+    display: block;
+    /* No floating content on sides */
+}
+
+/* if i want to add a nice little background
+body,
+html {
+    padding: 0;
+    background: url('./images/background2.png') no-repeat center center fixed;
+    background-size: cover;
+} */
+
+#bottom,
+#top,
+#popup {
+    border-radius: 15px;
+    /* Rounded corners with a 15-pixel radius */
+    margin: 0;
+    padding: 8px;
+    /* Space inside the panel */
+    position: fixed;
+    background-color: rgba(211, 211, 211, 0.715);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    /* Optional: add a shadow for better effect */
+    color: rgb(44, 42, 42);
+    /*z-index: 2;*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
+
+#popup {
+    z-index: 1000;
+    display: none;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 255, 1);
+}
+
+
+#bottom {
+    bottom: 10px;
+    left: 10px;
+}
+
+#top {
+    top: 10px;
+    left: 10px;
+}
+
+#extra {
+    color: rgba(255, 0, 255, 1);
+}
+
+#mute,
+#archibald_hp {
+    display: none;
+}
+
+#hp_bar {
+    background-color: rgb(165, 165, 165);
+    border: rgba(255, 0, 255, 1);
+}
+
+#hp_bar::-webkit-progress-value {
+    background-color: rgba(255, 0, 255, 1);
+}
+
+#hp_bar::-webkit-progress-bar {
+    background-color: rgb(165, 165, 165);
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,176 @@
+{
+  "root": "sceneTree",
+  "tomato_root": "ammo",
+  "cow_root": "Archibald",
+  
+  "nodes": {
+    "sceneTree": {
+      "children": ["tank"]
+    },
+
+    "Archibald":{
+      "transforms": { "scale":[5,5,5] },
+      "primitive": "cow",
+      "color": [1, 0, 1, 1],
+      "lineColor": [0.5, 0, 0.5, 1]
+    },
+
+    "ammo": {
+      "children": ["tomato", "stem"]
+    },
+
+    "tomato": {
+      "transforms": { "scale": [0.6, 0.6, 0.6] },
+      "primitive": "sphere", "color": [0.8, 0.1, 0.0, 1.0], "lineColor": [0.8, 0.1, 0.0, 1.0]
+    },
+
+    "stem": {
+      "transforms": { "translation": [0, 0.35, 0], "scale": [0.1, 0.1, 0.1] },
+      "primitive": "cylinder", "color": [0.04, 0.3, 0.15, 1.0], "lineColor": [0.04, 0.3, 0.15, 1.0]
+    },
+
+    "tank": {
+      "transforms": { "translation": ["move", 0.65, 0] },
+      "children": ["wheels", "body", "sides"]
+    },
+
+    "wheels": {
+      "children": ["leftWheels", "rightWheels"]
+    },
+
+    "leftWheels": {
+      "transforms": { "translation": [-3.3, 0, 2], "scale": [1.1, 1.2, 1.1] },
+      "children": [ "wheel_0", "wheel_1", "wheel_2", "wheel_3", "wheel_4", "wheel_5", "wheel_6" ]
+    },
+
+    "rightWheels": {
+      "transforms": { "translation": [-3.3, 0, -2], "scale": [1.1, 1.2, 1.1] },
+      "children": [ "wheel_0", "wheel_1", "wheel_2", "wheel_3", "wheel_4", "wheel_5", "wheel_6" ]
+    },
+
+    "wheel_0": {
+      "transforms": { "translation": [0, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    "wheel_1": {
+      "transforms": { "translation": [1, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    "wheel_2": {
+      "transforms": { "translation": [2, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    "wheel_3": {
+      "transforms": { "translation": [3, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    "wheel_4": {
+      "transforms": { "translation": [4, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    "wheel_5": {
+      "transforms": { "translation": [5, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    "wheel_6": {
+      "transforms": { "translation": [6, 0, 0], "rotation": [90, 0, "moveWheels"] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+
+    "body": {
+      "transforms": { "translation": [0, 0.5, 0] },
+      "children": ["bottomBase", "top"]
+    },
+
+    "bottomBase": {
+      "transforms": { "scale": [9, 1, 4] },
+      "primitive": "cube", "color": [0.6, 0.5, 0.3, 1.0]
+    },
+
+    "top": {
+      "transforms": { "translation": [0, 1, 0] },
+      "children": ["topBase", "gun"]
+    },
+
+    "topBase": {
+      "transforms": { "scale": [9, 1, 5] },
+      "primitive": "cube", "color": [0.6, 0.5, 0.3, 1.0]
+    },
+
+    "gun": {
+      "transforms": { "translation": [0.5, 0.6, 0], "rotation": [0, "turnCabin", 0] },
+      "children": ["cabinBase", "restOfGun"]
+    },
+
+    "cabinBase": {
+      "transforms": { "scale": [5, 0.2, 3.4] },
+      "primitive": "cylinder", "color": [0.6, 0.5, 0.3, 1.0]
+    },
+
+    "restOfGun": {
+      "transforms": { "translation": [0, 0.6, 0] },
+      "children": ["cabin", "cannon"]
+    },
+
+    "cabin": {
+      "transforms": { "scale": [5.6, 2.5, 3.8] },
+      "primitive": "sphere", "color": [0.6, 0.5, 0.3, 1.0]
+    },
+
+    "cannon": {
+      "transforms": { "translation": [2, 0.5, 0], "rotation": [0, 0, "turnCannon"] },
+      "children": ["cannonJoint", "restOfCannon"]
+    },
+
+    "cannonJoint": {
+      "transforms": { "rotation": [90, 0, 0], "scale": [2, 1, 2] },
+      "primitive": "cylinder", "color": [0.6, 0.5, 0.3, 1.0]
+    },
+
+    "restOfCannon": {
+      "transforms": { "translation": [0, 2.5, 0] },
+      "children": ["barrel", "barrelMouth"]
+    },
+
+    "barrel": {
+      "transforms": { "scale": [0.6, 4, 0.6] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+
+    "barrelMouth": {
+      "transforms": { "translation": [0, 2.1, 0] },
+      "children": ["mouthBase", "mouth"]
+    },
+
+    "mouthBase": {
+      "transforms": { "scale": [1, 0.2, 1] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+
+    "mouth": {
+      "transforms": { "translation": [0, 0.3, 0], "scale": [1.5, 0.4, 1.5] },
+      "primitive": "cylinder", "color": [0.3, 0.3, 0.3, 1.0]
+    },
+    
+
+    "sides": {
+      "transforms": { "translation": [0, 1, 0] },
+      "children": ["leftSide", "rightSide"]
+    },
+
+    "leftSide": {
+      "transforms": { "translation": [-4.5, 0, 0] },
+      "children": ["side"]
+    },
+
+    "rightSide": {
+      "transforms": { "translation": [4.5, 0, 0] },
+      "children": ["side"]
+    },
+
+    "side": {
+      "transforms": { "rotation": [90, 0, 0], "scale": [1.8, 5, 2] },
+      "primitive": "cylinder", "color": [0.6, 0.5, 0.3, 1.0]
+    }
+  }
+}

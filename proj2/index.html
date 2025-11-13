@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tank</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./sound.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="gl-canvas" width="128" height="128">
+            Oops! Something went wrong!
+        </canvas>
+        <div id="overlay">
+            <div id="top">
+                <div>Tomatoes left: <span id="tomato_count"></span></div>
+                <div id="archibald_hp">
+                    <div>high score: <span id="high_score"></span></div>
+                    <div>total points: <span id="points_count"></span></div>
+                    <div>level: <span id="level"></span></div>
+                    <div>Enemy hp: <progress id="hp_bar" value="5" max="5"></progress></div>
+                    <div id="popup"></div>
+                </div>
+                <div id="extra">
+                    <div id="mute">Mute</div>
+                </div>
+            </div>
+            <div id="bottom">
+                <div><b>Keys</b></div>
+                <div>'h' - Toggle this panel</div>
+                <div>'0' : Toggle 1/4 views</div>
+                <div>'1' : Front view</div>
+                <div>'2' : Left view</div>
+                <div>'3' : Top view</div>
+                <div>'4' : 4th view</div>
+                <div>'8' : Toggle 4th view (Oblique vs Axonometric)</div>
+                <div>'9' : Parallel vs Perspective</div>
+                <div>' ' : Toggle wireframe/solid</div>
+                <div>'q' : Move forward</div>
+                <div>'e' : Move backward</div>
+                <div>'w' : Raise cannon</div>
+                <div>'s' : Lower cannon</div>
+                <div>'a' : Rotate cabin ccw</div>
+                <div>'d' : Rotate cabin cw</div>
+                <div>'r' : Reset view params</div>
+                <div>'z' : Shoot tomato</div>
+                <div>'←' : Increase theta</div>
+                <div>'→' : Decrease theta</div>
+                <div>'↑' : Increase gamma</div>
+                <div>'↓' : Decrease gamma</div>
+                <div id="extra">
+                    <div>'c' : Clean floor</div>
+                    <div>'m' : Toggle audio</div>
+                    <div>'.' : Toggle fancy Archibald</div>
+                    <div>'g' : Toggle game mode</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
