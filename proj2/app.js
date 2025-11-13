@@ -1,13 +1,13 @@
-import { buildProgramFromSources, loadJSONFile, loadShadersFromURLS, setupWebGL } from "../libs/utils.js";
-import { ortho, lookAt, flatten, perspective, add, mult, inverse, scale, rotateX, rotateY, translate } from "../libs/MV.js";
-import { modelView, loadMatrix, multRotationX, multRotationY, multRotationZ, multScale, multTranslation, popMatrix, pushMatrix } from "../libs/stack.js";
-import { mat4, vec4, vec3, radians } from "../libs/MV.js";
+import { buildProgramFromSources, loadJSONFile, loadShadersFromURLS, setupWebGL } from "./libs/utils.js";
+import { ortho, lookAt, flatten, perspective, add, mult, inverse, scale, rotateX, rotateY, translate } from "./libs/MV.js";
+import { modelView, loadMatrix, multRotationX, multRotationY, multRotationZ, multScale, multTranslation, popMatrix, pushMatrix } from "./libs/stack.js";
+import { mat4, vec4, vec3, radians } from "./libs/MV.js";
 import { Sound } from './sound.js';
 
-import * as CUBE from '../libs/objects/cube.js';
-import * as CYLINDER from '../libs/objects/cylinder.js'
-import * as SPHERE from '../libs/objects/sphere.js'
-import * as COW from '../libs/objects/cow.js'
+import * as CUBE from './libs/objects/cube.js';
+import * as CYLINDER from './libs/objects/cylinder.js'
+import * as SPHERE from './libs/objects/sphere.js'
+import * as COW from './libs/objects/cow.js'
 
 const CUBE_STRING = "cube";
 const CYLINDER_STRING = "cylinder";
