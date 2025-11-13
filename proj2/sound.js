@@ -6,7 +6,7 @@ const emptyGunAudio = new Audio('./audio/empty-gun.mp3');
 const splatAudio = new Audio('./audio/tomato-splat.mp3');
 const sadAudio = new Audio('./audio/sad-cow.mp3');
 const deadAudio = new Audio('./audio/dead-cow.mp3');
-const gameAudio = new Audio('./audio/background.mp3');
+const gameAudio = new Audio('./audio/background2.mp3');
 const victoryAudio = new Audio('./audio/victory.mp3');
 
 moveAudio.loop = true;
